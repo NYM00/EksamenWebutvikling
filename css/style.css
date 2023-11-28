@@ -3,7 +3,7 @@
 }
 body {
     margin: 0 auto;
-    max-width: 1400px;
+    max-width: 2800px;
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -61,19 +61,58 @@ header nav ul a{
 }
 
 .headlines{
-    align-items: center;
-    justify-content: center;
     background-color:#cccccc;
-    left: 50%;
     text-align: center;
+    padding: 35px;
 }
 
-h1{
-    font-size: 36px;
+.headlines h1{
+    font-size: 48px;
+    margin-bottom: 5px;
 }
 
-p{
+.headlines .description{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.headlines .description p {
     font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    margin: 0 10rem 2rem 10rem;
+  }
+
+.description{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#subhead{
+    text-align: center;
+    padding: 20px;
+    margin: 0 10rem 2rem 10rem;
+}
+
+.subhead h3 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.subhead .description {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.subhead .description p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
 }
 
 #contact{
@@ -84,11 +123,79 @@ p{
 .readmore{
     background-color:#e6bd43;
     padding: 1rem;
-    margin: 1rem;
+    margin: 2rem;
     text-decoration: none;
     color: #000;
     font-size: 14px;
     font-weight: bold;
+}
+
+.signup-container {                            /*signup css-en har informasjon hentet fra ChatGPT men justert etter mine preferanser og ønsker.*/
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.signup-input {
+  width: 70%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.signup-button {
+  width: 30%;
+  padding: 10px;
+  background-color: #e6bd43;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 5px;
+}
+
+.signup-button:hover {
+  background-color: #d4a432;
+}
+
+#about{
+padding: 1rem;
+border-style: none;
+border-color: #000;
+text-decoration: none;
+color: #000;
+font-weight: bold;
+}
+
+footer {
+  background-color: #252525;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 25px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.social-links{
+    justify-content: right;
+}
+
+.social-links a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.copyright{
+    padding-left: 180px;
 }
 
 @media only screen and (min-width:850px) {
