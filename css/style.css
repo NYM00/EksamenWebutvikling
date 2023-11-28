@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0 auto;
+    max-width: 1400px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:"topp" 
+                        "hovedomraade" 
+                        "sidebar" 
+                        "bunn";
+}
+
+header{
+    grid-area: topp;
+}
+
+main{
+    grid-area: hobedomraade;
+}
+
+aside{
+    grid-area: sidebar;
+}
+
+footer{
+    grid-area: bunn;
+}
+
+#logo{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 1rem;
+}
+
+header nav ul {
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+header nav ul a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.headlines{
+    align-items: center;
+    justify-content: center;
+    background-color:#cccccc;
+    left: 50%;
+    text-align: center;
+}
+
+h1{
+    font-size: 36px;
+}
+
+p{
+    font-size: 14px;
+}
+
+#contact{
+    background-color:#e6bd43;
+    padding: 1rem;
+}
+
+.readmore{
+    background-color:#e6bd43;
+    padding: 1rem;
+    margin: 1rem;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@media only screen and (min-width:850px) {
+
+}
