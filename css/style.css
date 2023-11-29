@@ -1,525 +1,561 @@
 *{
     box-sizing: border-box;
 }
-body {
-    margin: 0 auto;
-    max-width: 1600px;
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
-#grid-container{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas:"topp" 
-                        "hovedomraade" 
-                        "sidebar" 
-                        "bunn";
-}
+@media only screen and (min-width: 850px) {
 
-header{
-    grid-area: topp;
-}
+    body {
+        margin: 0 auto;
+        max-width: 1600px;
+        width: 100%;
+        font-family: 'Nunito', sans-serif;
+    }
 
-main{
-    grid-area: hobedomraade;
-}
+    #grid-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas:"topp" 
+                            "hovedomraade" 
+                            "sidebar" 
+                            "bunn";
+    }
 
-aside{
-    grid-area: sidebar;
-}
+    header{
+        grid-area: topp;
+    }
 
-footer{
-    grid-area: bunn;
-}
+    main{
+        grid-area: hobedomraade;
+    }
 
-/*#logo{
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    color: black;
-}
-Teksten "Logo" byttes ut med logo bildet. Men jeg vil beholde css-en i tilfelle. 
-*/
+    aside{
+        grid-area: sidebar;
+    }
 
-.logo img{
-    max-height: 80px;
-    max-width: 80px;
-}
+    footer{
+        grid-area: bunn;
+    }
 
-header {
+    /*#logo{
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 600;
+        color: black;
+    }
+    Teksten "Logo" byttes ut med logo bildet. Men jeg vil beholde css-en i tilfelle. 
+    */
+
+    .logo img{
+        max-height: 80px;
+        max-width: 80px;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem;
+    }
+
+    header nav ul {
+        display: flex;
+        gap: 0.5rem;
+        list-style: none;
+    }
+
+    header nav ul a{
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+    }
+
+    #menutags ul{
+        display: flex;
+        gap: 0.2rem;
+        list-style: none;
+        padding: 2rem 2rem 1rem 0;
+    }
+
+    #menutags ul li {
+    border: 0.5px solid #000;
+    padding: 5px 10px;
+    margin-right: 10px;
+    }
+
+    #menutags ul li:last-child {
+        margin-right: 0;
+    }
+
+    #menutags ul a{
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+    }
+    /* Benyttet meg av ChatGPT for å løse delen med en Gul strek under hver av overskriftene på Portofolio-siden. */
+    h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 36px;
+    }
+
+    h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%; 
+    border-bottom: 2px solid #e6bd43; 
+    }
+
+    #headlines{
+        background-image: url("img/nepal.jpg");
+        background-size: cover; 
+        background-position: center;
+        text-align: center;
+        padding: 35px;
+    }
+
+    #headlines h1{
+        font-size: 48px;
+        margin-bottom: 5px;
+    }
+
+
+
+    #headlines .description p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        margin: 2rem 25rem 2rem 25rem;
+    }
+
+    #subhead{
+        text-align: center;
+        padding: 20px;
+        margin: 0 18rem 2rem 18rem;
+    }
+
+    #subhead h3 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .subhead .description {
+        margin: 0 auto;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .subhead .description p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+
+    /* Deler av koden som gjelder About Our Company artikkelboksen er hentet av ChatGPT. Men endret på i stor grad for å tilpasse etter behov og besvarelse av oppgaven*/
+
+    .article-box {
+    border: 1px solid #000;
+    padding: 20px;
+    margin: 20px 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    }
+
+    .content-wrapper {
+    display: flex;
+    flex-basis: 100%;
+    margin-bottom: 10px;
+    justify-content: center;
+    }
+    .content-wrapper img {
+    max-width: 400px; /* Juster etter ønsket størrelse */
     margin: 1rem;
-}
+    margin-right: 20px;
+    padding-right: 1rem;
+    }
 
-header nav ul {
-    display: flex;
-    gap: 0.5rem;
-    list-style: none;
-}
+    .text-wrapper {
+    max-width: 33%;
+    margin-top: 3rem;
+    }
 
-header nav ul a{
+    .text-wrapper h3{
+        font-size: 28px;
+        margin-bottom: 2px;
+    }
+
+    .text-wrapper a#about {
+    display: block;
+    text-align: center;
+    border: 1px solid #000;
     text-decoration: none;
     color: #000;
     font-weight: bold;
-}
+    margin-top: 10px;
+    max-width: 50%;
+    }
 
-#menutags ul{
+    .about-box {
+    padding: 20px;
+    margin: 20px 0;
     display: flex;
-    gap: 0.2rem;
-    list-style: none;
-    padding: 2rem 2rem 1rem 0;
-}
-
-#menutags ul li {
-  border: 0.5px solid #000;
-  padding: 5px 10px;
-  margin-right: 10px;
-}
-
-#menutags ul li:last-child {
-    margin-right: 0;
-}
-
-#menutags ul a{
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-}
-/* Benyttet meg av ChatGPT for å løse delen med en Gul strek under hver av overskriftene på Portofolio-siden. */
-h2 {
-  position: relative;
-  display: inline-block;
-  font-size: 36px;
-}
-
-h2::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%; 
-  border-bottom: 2px solid #e6bd43; 
-}
-
-#headlines{
-    background-image: url("img/nepal.jpg");
+    flex-wrap: wrap;
+    justify-content: right;
+    background-image: url("img/headphones.png"); 
     background-size: cover; 
     background-position: center;
+    }
+
+    .about-wrapper {
+    display: flex;
+    flex-basis: 100%;
+    margin: 20px;
+    background-color: #ccccccc5;
+    max-width: 50%;
+    padding: 0 0 2rem 2rem;
+    }
+
+    .about-wrapper a#about {
+    display: block;
     text-align: center;
-    padding: 35px;
-}
-
-#headlines h1{
-    font-size: 48px;
-    margin-bottom: 5px;
-}
-
-
-
-#headlines .description p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    margin: 2rem 25rem 2rem 25rem;
-}
-
-#subhead{
-    text-align: center;
-    padding: 20px;
-    margin: 0 18rem 2rem 18rem;
-}
-
-#subhead h3 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.subhead .description {
-    margin: 0 auto;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.subhead .description p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-
-/* Deler av koden som gjelder About Our Company artikkelboksen er hentet av ChatGPT. Men endret på i stor grad for å tilpasse etter behov og besvarelse av oppgaven*/
-
-.article-box {
-  border: 1px solid #000;
-  padding: 20px;
-  margin: 20px 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.content-wrapper {
-  display: flex;
-  flex-basis: 100%;
-  margin-bottom: 10px;
-  justify-content: center;
-}
-.content-wrapper img {
-  max-width: 400px; /* Juster etter ønsket størrelse */
-  margin: 1rem;
-  margin-right: 20px;
-  padding-right: 1rem;
-}
-
-.text-wrapper {
-  max-width: 33%;
-  margin-top: 3rem;
-}
-
-.text-wrapper h3{
-    font-size: 28px;
-    margin-bottom: 2px;
-}
-
-.text-wrapper a#about {
-  display: block;
-  text-align: center;
-  border: 1px solid #000;
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-  margin-top: 10px;
-  max-width: 50%;
-}
-
-.about-box {
-  padding: 20px;
-  margin: 20px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: right;
-  background-image: url("img/headphones.png"); 
-  background-size: cover; 
-  background-position: center;
-}
-
-.about-wrapper {
-  display: flex;
-  flex-basis: 100%;
-  margin: 20px;
-  background-color: #ccccccc5;
-  max-width: 50%;
-  padding: 0 0 2rem 2rem;
-}
-
-.about-wrapper a#about {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
-  margin-top: 10px;
-  max-width: 100%;
-}
-
-.about-text-wrapper {
-  margin: 1.5rem;
-}
-
-.about-text-wrapper h3{
-    font-size: 22px;
-    margin-bottom: 2px;
-}
-
-.about-text-wrapper a#about {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  background-color: #e6bd43;
-  color: #000;
-  font-weight: bold;
-  margin-top: 10px;
-  max-width: 50%;
-}
-
-#contact{
-    background-color:#e6bd43;
-    padding: 1rem;
-}
-
-.readmore{
-    background-color:#e6bd43;
-    padding: 1rem;
-    margin: 2rem;
     text-decoration: none;
     color: #000;
-    font-size: 14px;
     font-weight: bold;
-}
+    margin-top: 10px;
+    max-width: 100%;
+    }
 
-.signup-container {                            /*signup css-en har informasjon hentet fra ChatGPT men justert etter mine preferanser og ønsker.*/
-  display: flex;
-}
+    .about-text-wrapper {
+    margin: 1.5rem;
+    }
 
-.signup-input {
-  width: 500px;
-  padding: 10px;
-  font-size: 14px;
-  margin-right: 10px;
-}
+    .about-text-wrapper h3{
+        font-size: 22px;
+        margin-bottom: 2px;
+    }
 
-#index-signup-input {
-  width: 100%;
-  padding: 2rem;
-  font-size: 14px;
-  margin-right: 10px;
-}
+    .about-text-wrapper a#about {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #e6bd43;
+    color: #000;
+    font-weight: bold;
+    margin-top: 10px;
+    max-width: 50%;
+    }
 
-#message-input {
+    #contact{
+        background-color:#e6bd43;
+        padding: 1rem;
+    }
+
+    .readmore{
+        background-color:#e6bd43;
+        padding: 1rem;
+        margin: 2rem;
+        text-decoration: none;
+        color: #000;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .signup-container {                            /*signup css-en har informasjon hentet fra ChatGPT men justert etter mine preferanser og ønsker.*/
+    display: flex;
+    }
+
+    .signup-input {
     width: 500px;
     padding: 10px;
     font-size: 14px;
     margin-right: 10px;
-    height: 125px;
-}
+    }
 
-.signup-button {
-  background-color: #e6bd43;
-  color: #000;
-  font-size: 14px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  padding: 10px;
-  width: 33%;
-  margin-top: 2px;
-}
+    #index-signup-input {
+    width: 100%;
+    padding: 2rem;
+    font-size: 14px;
+    margin-right: 10px;
+    }
 
-#index-signup-button {
-  background-color: #e6bd43;
-  color: #000;
-  font-size: 14px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 200px;
-  margin-top: 2px;
-  white-space: nowrap;     /*For hjelp med å holde "Sign me up" på en linje og ha ordene ovenfor hverandre fant jeg fram til denne løsningen ved hjelp av dette nettstedet: https://bobbyhadz.com/blog/html-force-div-text-one-line */
-}
+    #message-input {
+        width: 500px;
+        padding: 10px;
+        font-size: 14px;
+        margin-right: 10px;
+        height: 125px;
+    }
 
-.signup-button:hover {
-  background-color: #d4a432;
-}
+    .signup-button {
+    background-color: #e6bd43;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 10px;
+    width: 33%;
+    margin-top: 2px;
+    }
 
-#about{
-padding: 1rem;
-border-style: none;
-border-color: #000;
-text-decoration: none;
-color: #000;
-font-weight: bold;
-}
+    #index-signup-button {
+    background-color: #e6bd43;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    margin-top: 2px;
+    white-space: nowrap;     /*For hjelp med å holde "Sign me up" på en linje og ha ordene ovenfor hverandre fant jeg fram til denne løsningen ved hjelp av dette nettstedet: https://bobbyhadz.com/blog/html-force-div-text-one-line */
+    }
 
-footer {
-  background-color: #252525;
-  color: #fff;
-  font-weight: bold;
-  text-align: center;
-  padding: 25px 0;
-}
+    .signup-button:hover {
+    background-color: #d4a432;
+    }
 
-.footer-container {
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-.social-links{
-    justify-content: right;
+    #about{
     padding: 1rem;
-}
-
-.social-links a{
+    border-style: none;
+    border-color: #000;
     text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    }
+
+    footer {
+    background-color: #252525;
     color: #fff;
     font-weight: bold;
-}
-
-.copyright{
-    padding-left: 120px;
-}
-
-.center-text {
-    padding-top: 2rem;
     text-align: center;
-    font-size: 38px;
-    margin-bottom: 1rem;
-}
+    padding: 25px 0;
+    }
 
-.servicebox-flex {
+    .footer-container {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
     margin: 0 auto;
-}
-
-.servicebox-flex article {
-    flex-basis: calc(25% - 40px); /* Juster størrelsen etter behov */
-    margin: 20px;
-    padding: 20px;
-    text-align: center;
-}
-
-.servicebox-flex article h5 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.servicebox-flex article p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-.contact-box-flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #cccccc;
-    padding-bottom: 1rem;
-}
-
-.contact-box-flex h3 {
-    margin-bottom: 20px; /* Juster etter behov */
-}
-
-.contact-box-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-#index-contact-box-wrapper{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.contact-box {
-    margin-bottom: 40px;
-    margin: 1rem;
-    width: 33%;
-}
-
-.contact-box h5 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.contact-box p {
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-#signup-newsletter{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #e4e4e4;
-    padding-bottom: 2rem;
-}
-
-input {
-    border: none;
-    background-color: #fff;
-}
-
-.clientsbox-flex {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    background-color: #e6bd43;
-    text-align: center;
-    flex-direction: column;
-}
-
-.clientsbox-flex article {
-    flex-basis: calc(25% - 40px); /* Juster størrelsen etter behov */
-    margin: 20px;
-    padding: 20px;
-    align-items: center;
-}
-
-.clientsbox-flex h3 {
-    margin: 1rem;
-    font-size: 38px;
-}
-
-.default-flex{
-    margin: 2.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.default-flex h2{
-    flex-basis: 100%;
-}
-
-.default-flex article{
-    flex-basis: 33%;
-    min-width: 300px;
-    flex-grow: 1;
-    max-width: 692px;
     padding: 1rem;
+    }
+
+    .social-links{
+        justify-content: right;
+        padding: 1rem;
+    }
+
+    .social-links a{
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .copyright{
+        padding-left: 120px;
+    }
+
+    .center-text {
+        padding-top: 2rem;
+        text-align: center;
+        font-size: 38px;
+        margin-bottom: 1rem;
+    }
+
+    .servicebox-flex {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    .servicebox-flex article {
+        flex-basis: calc(25% - 40px); /* Juster størrelsen etter behov */
+        margin: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .servicebox-flex article h5 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .servicebox-flex article p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+
+    .contact-box-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #cccccc;
+        padding-bottom: 1rem;
+    }
+
+    .contact-box-flex h3 {
+        margin-bottom: 20px; /* Juster etter behov */
+    }
+
+    .contact-box-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    #index-contact-box-wrapper{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .contact-box {
+        margin-bottom: 40px;
+        margin: 1rem;
+        width: 33%;
+    }
+
+    .contact-box h5 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    .contact-box p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    #signup-newsletter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #e4e4e4;
+        padding-bottom: 2rem;
+    }
+
+    input {
+        border: none;
+        background-color: #fff;
+    }
+
+    .clientsbox-flex {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        background-color: #e6bd43;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .clientsbox-flex article {
+        flex-basis: calc(25% - 40px); /* Juster størrelsen etter behov */
+        margin: 20px;
+        padding: 20px;
+        align-items: center;
+    }
+
+    .clientsbox-flex h3 {
+        margin: 1rem;
+        font-size: 38px;
+    }
+
+    .default-flex{
+        margin: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .default-flex h2{
+        flex-basis: 100%;
+    }
+
+    .default-flex article{
+        flex-basis: 33%;
+        min-width: 300px;
+        flex-grow: 1;
+        max-width: 692px;
+        padding: 1rem;
+    }
+
+    .default-flex article img{
+        width: 100%;
+    }
+
+    #coverpic-text{
+        background-image: url("img/headphones.png"); 
+        background-size: cover; 
+        background-position: center; 
+        padding: 50px; 
+        text-align: center;
+        color:#000; 
+    }
+
+    #map {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    #map img {
+        width: 100%;
+        display: block;
+    }
+
+    #coverpic-text h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    }
+
+    #credit{
+        font-size: 10px;
+    }
+    #credit a{
+        text-decoration: none;
+        color: #252525;
+    }
+
+    #contact-tags{
+        display: flex;
+        align-items: baseline;
+    }
+
+    #contact-tags p{
+        margin: 0 0 0.5rem 2rem;
+    }
 }
 
-.default-flex article img{
-    width: 100%;
-}
+@media only screen and (max-width: 849px) {
 
-#coverpic-text{
-    background-image: url("img/headphones.png"); 
-    background-size: cover; 
-    background-position: center; 
-    padding: 50px; 
-    text-align: center;
-    color:#000; 
-}
-
-#map {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-#map img {
-    width: 100%;
-    display: block;
-}
-
-#coverpic-text h1 {
-  font-size: 50px;
-  margin-bottom: 20px;
-}
-
-#credit{
-    font-size: 10px;
-}
-#credit a{
-    text-decoration: none;
-    color: #252525;
-}
-
-@media only screen and (min-width:850px) {
+    .item1 { grid-area: header; }
+    .item2 { grid-area: menu; }
+    .item3 { grid-area: main; }
+    .item4 { grid-area: right; }
+    .item5 { grid-area: footer; }
+    
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        'header'
+        'main'
+        'footer';
+      background-color: #2196F3;
+      padding: 10px;
+    }
+    
+    .grid-container > div {
+      background-color: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 30px;
+    }   
 
 }
