@@ -523,12 +523,12 @@
         color: #252525;
     }
 
-    #contact-tags{
+    .contact-tags{
         display: flex;
         align-items: baseline;
     }
 
-    #contact-tags p{
+    .contact-tags p{
         margin: 0 0 0.5rem 2rem;
     }
 }
