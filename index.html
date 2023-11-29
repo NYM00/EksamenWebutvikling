@@ -4,98 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://kit.fontawesome.com/93c7853943.js" crossorigin="anonymous"></script>
     <title>EksamenVWN</title>
 </head>
 <body>
     <header>
         <span>
-            <a href="#" id="logo">Logo</a>
+            <a href="index.html" class="logo">
+                <img src="css/img/logo1.png" alt="Logo til nettstedet. Rund logo i fargene hvit og grå, med skriften Iloceam Pleam">
+            </a>
         </span>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Portofolio</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="about.html" id="contact">Contact</a></li>
+                <li><a href="about.html#contact-us" id="contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <!--<section class="default-flex">-->
-            <article class="headlines">
+            <article id="headlines">
                 <h1>Compeling headline</h1>
-                <span class="description">
+                <div class="description">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Proin sed libero enim sed faucibus. Duis at consectetur lorem donec massa sapien faucibus</p>
-                </span>
+                </div>
                 <span>
-                    <a href="about.html" class="readmore">Read more about our services</a>
+                    <a href="#our-services" class="readmore">Read more about our services</a>
                 </span>
             </article>
+            Image by <a href="https://pixabay.com/users/12019-12019/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2184940">12019</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2184940">Pixabay</a>
             
             <article id="subhead">
                 <h3>Enganging subheading. What can you help your visitor with</h3>
-                <span class="description">
+                <div class="description">
                 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            </span>
+                </div>
             </article>
             
-            <article>
-                <img src="https://placehold.co/250x250" alt="About Our Company Picture">
-                <h3>About Our Company</h3>
-                <span>
-                    <a href="about.html" id="about">Read more about us</a>
-                </span>
-            </article>
+            <section id="aboutcompany" class="article-box">
+                <div class="content-wrapper">
+                    <img src="https://placehold.co/400x400" alt="About Our Company Picture">
+                    <article class="text-wrapper">
+                        <h3>About Our Company</h3>
+                        <h5>Risus at ultrices mi tempus imperdiet nulla malesuada. Adipiscing elit duis tristique sollicitudin nibh sit amet commodo. Et magnis dis parturient montes nascetur ridiculus</h5>
+                        <span>
+                            <a href="index.html" id="about">Read more about us</a>
+                        </span>
+                    </article>
+                </div>
+            </section>
             
-            <section class="default-flex">
+            <h3 id="our-services" class="center-text">Our services</h3>
+            <section class="servicebox-flex">
                 <article class="servicebox">
-                    <h2>Our services</h2>
-                </article>
-                
-                <article class="servicebox">
-                    <h4>Branding</h4>
+                    <i class="fa-solid fa-people-group" style="font-size:38px;color: #262626;"></i>
+                    <h5>Branding</h5>
                     <p>Lacus vestibulum sed arcu non odio euismod lacinia at quis.</p>
                 </article>
                 
                 <article class="servicebox">
-                    <h4>Design</h4>
+                    <i class="fa-solid fa-cloud-arrow-up" style="font-size:38px;color: #262626;"></i>
+                    <h5>Branding</h5>
                     <p>Lacus vestibulum sed arcu non odio euismod lacinia at quis.</p>
                 </article>
                 
                 <article class="servicebox">
-                    <h4>Development</h4>
+                    <i class="fa-solid fa-code" style="font-size:38px;color: #262626;"></i>
+                    <h5>Branding</h5>
                     <p>Lacus vestibulum sed arcu non odio euismod lacinia at quis.</p>
                 </article>
                 
                 <article class="servicebox">
-                    <h4>Support</h4>
+                    <i class="fa-solid fa-wifi" style="font-size:38px;color: #262626;"></i>
+                    <h5>Branding</h5>
                     <p>Lacus vestibulum sed arcu non odio euismod lacinia at quis.</p>
                 </article>
             </section>
-            <article class="headlines">
-                <h3>Sign up for our newsletter</h3>
-                <div class="description">
-                    <div class="signup-container">
-                        <input type="email" placeholder="Nora@epost.no" class="signup-input">
-                        <button class="signup-button">Sign me up</button>
-                    </div>
-                </div>
-                <!--Koden som benytter div har jeg fått hjelp av ChatGPT til å utforme en signup-mulighet på siden.-->
-            </article>
-        </section>
+            
+            <section id="signup-newsletter">
+                <h3 class="center-text">Sign up for our newsletter</h3>
+                <article id="index-contact-box-wrapper">
+                    <span class="contact-box">
+                        <span class="signup-container">
+                            <input type="email" placeholder="ola@email.com" id="index-signup-input">
+                            <button id="index-signup-button">Sign me up</button>
+                        </span>
+                    </span>
+                </article>
+            </section>
     </main>
     <footer>
         <section class="footer-container">
             <span>
-                <a href="#" id="logo">Logo</a>
+                <a href="index.html" class="logo">
+                    <img src="css/img/logo1.png" alt="Logo til nettstedet. Rund logo i fargene hvit og grå, med skriften Iloceam Pleam">
+                </a>
             </span>
             <span class="copyright">
                 Company Copyright 2023
             </span>
             <span class="social-links">
-                <a href="https://www.facebook.com/" class="social-icon">Facebook</a>
-                <a href="https://www.instagram.com/" class="social-icon">Instagram</a>
-                <a href="https://no.linkedin.com/" class="social-icon">LinkedIn</a>
+                <i class="fa-brands fa-square-facebook" style="font-size:38px;color: #ffffff;"></i>
+                <i class="fa-brands fa-square-instagram" style="font-size:38px;color: #ffffff;"></i>
+                <i class="fa-brands fa-linkedin" style="font-size:38px;color: #ffffff;"></i>
             </span>
         </section>
     </footer>
